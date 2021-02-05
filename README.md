@@ -1,2 +1,3 @@
-# spectral-playground
+# Spectral Playground
+
 Playground for Stoplight Spectral
