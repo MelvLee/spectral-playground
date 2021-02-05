@@ -4,6 +4,7 @@
   "description": "Playground for Stoplight Spectral",
   "main": "index.js",
   "scripts": {
+    "oas:lint": "spectral lint ./oas/*",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/MelvLee/spectral-playground/issues"
   },
-  "homepage": "https://github.com/MelvLee/spectral-playground#readme"
+  "homepage": "https://github.com/MelvLee/spectral-playground#readme",
+  "devDependencies": {
+    "@stoplight/spectral": "^5.8.0"
+  }
 }

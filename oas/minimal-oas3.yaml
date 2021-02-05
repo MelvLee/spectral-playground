@@ -1,0 +1,5 @@
+openapi: 3.0.3
+info:
+  title: Minimal OAS 3.0.x description document
+  version: 1.0.0 - Alfa
+paths: {}
