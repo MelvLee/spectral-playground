@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "oas:lint": "spectral lint ./oas/*",
+    "oas:lint-warning-as-errors": "spectral lint -F warn ./oas/*",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +20,12 @@
   },
   "homepage": "https://github.com/MelvLee/spectral-playground#readme",
   "devDependencies": {
-    "@stoplight/spectral": "^5.8.0"
+    "@stoplight/spectral": "^5.8.0",
+    "husky": "^4.3.8"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run oas:lint"
+    }
   }
 }
