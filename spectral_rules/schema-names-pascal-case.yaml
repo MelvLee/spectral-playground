@@ -1,0 +1,12 @@
+rules:
+  schema-names-pascal-case:
+    description: Schema names MUST be written in PascalCase
+    message: "component '{{property}}' {{error}}"
+    recommended: true
+    type: style
+    severity: error
+    given: '$.components.schemas.*~'
+    then:
+      function: casing
+      functionOptions:
+        type: pascal

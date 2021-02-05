@@ -4,9 +4,10 @@
   "description": "Playground for Stoplight Spectral",
   "main": "index.js",
   "scripts": {
-    "oas:lint": "spectral lint ./oas/*",
-    "oas:lint-warning-as-errors": "spectral lint -F warn ./oas/*",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "oas:lint": "spectral lint ./oas/minimal-oas3.yaml",
+    "oas:lint-warning-as-errors": "spectral lint -F warn ./oas/minimal-oas3.yaml",
+    "oas:lint-with-custom-rules": "spectral lint ./oas/not-compliant-to-custom-rules.yaml",
+    "spectral:validate-rules": "cucumber-js"
   },
   "repository": {
     "type": "git",
@@ -20,12 +21,14 @@
   },
   "homepage": "https://github.com/MelvLee/spectral-playground#readme",
   "devDependencies": {
+    "@cucumber/cucumber": "^7.0.0",
     "@stoplight/spectral": "^5.8.0",
+    "chai": "^4.3.0",
     "husky": "^4.3.8"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run oas:lint"
+      "pre-commit": "npm run spectral:validate-rules && npm run oas:lint"
     }
   }
 }

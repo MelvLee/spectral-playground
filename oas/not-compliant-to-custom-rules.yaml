@@ -1,0 +1,9 @@
+openapi: 3.0.3
+info:
+  title: Not compliant OAS3 description document
+  version: 1.0.0
+paths: {}
+components:
+  schemas:
+    camelCaseComponent:
+      type: object
