@@ -1,5 +1,6 @@
 extends:
 - spectral:oas
 - ./spectral_rules/schema-names-pascal-case.yaml
+- ./spectral_rules/text-printable-ascii-diacritics.yaml
 rules: {}
 

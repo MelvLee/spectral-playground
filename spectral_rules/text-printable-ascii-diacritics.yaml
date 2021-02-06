@@ -1,0 +1,13 @@
+rules:
+  text-printable-ascii-diacritics:
+    description: Text MUST be printable ASCII or diacritics. [ASCII table](https://theasciicode.com.ar/)
+    message: "{{property}}: '{{value}}' {{error}}"
+    recommended: true
+    resolved: false
+    type: style
+    severity: error
+    given: $..[description,summary,title]
+    then:
+      function: pattern
+      functionOptions:
+        match: "^[\\s!-/0-9:-@A-Z\x5B-`a-z{-~áéíóúäëïöüàèìòùñç]+$"
