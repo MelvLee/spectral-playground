@@ -3,7 +3,7 @@ const { Spectral, Document, Parsers, isOpenApiv3 } = require('@stoplight/spectra
 const { join } = require('path');
 const should = require('chai').should();
 
-Given('the Spectral rule {string}', function(rule) {
+Given('the rule {string}', function(rule) {
     this.rule = rule;
 });
 
@@ -24,7 +24,7 @@ Then('there should be no errors', function() {
     this.results.should.have.lengthOf(0, JSON.stringify(this.results, null, "\t"));
 });
 
-Then('the error message should be {string}', function(expected) {
+Then('the error message should be', function(expected) {
     this.results.should.have.lengthOf(1, JSON.stringify(this.results, null, "\t"));
     this.results[0].code.should.equal(this.rule, JSON.stringify(this.results, null, "\t"));
     this.results[0].message.should.equal(expected, JSON.stringify(this.results, null, "\t"));

@@ -1,7 +1,7 @@
 Feature: Schema names Must be written in PascalCase
 
   Background:
-    Given the Spectral rule 'schema-names-pascal-case'
+    Given the rule 'schema-names-pascal-case'
 
   Scenario: Schema name is written in PascalCase
     Given the OAS3 description document
@@ -25,7 +25,10 @@ Feature: Schema names Must be written in PascalCase
           type: object
     """
     When the OAS description document is linted
-    Then the error message should be 'component \'<component name>\' must be pascal case'
+    Then the error message should be
+    """
+    component '<component name>' must be pascal case
+    """
 
     Examples:
       | component name       |
