@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - ./oas/**/*.yaml
-      - .github/workflows/lint-oas3.yaml
+      - .github/workflows/lint-oas3.yml
       - .spectral.yaml
   workflow_dispatch:
 
