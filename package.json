@@ -21,9 +21,9 @@
   },
   "homepage": "https://github.com/MelvLee/spectral-playground#readme",
   "devDependencies": {
-    "@cucumber/cucumber": "^7.0.0",
-    "@stoplight/spectral": "^5.8.1",
-    "chai": "^4.3.0",
+    "@cucumber/cucumber": "^7.2.1",
+    "@stoplight/spectral": "^5.9.1",
+    "chai": "^4.3.4",
     "husky": "^4.3.8"
   },
   "husky": {
